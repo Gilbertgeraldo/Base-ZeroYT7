@@ -40,7 +40,7 @@ const starts = async (zeroyt7 = new WAConnection()) => {
         start('2', 'Menghubungkan...')
     })
     zeroyt7.on('open', () => {
-        success('2', 'Terhubung Jangan Lupa Subscribe Zero YT7')
+        success('2', 'Terhubung Jangan Lupa Follow ig:gaada_apa_apawkwk')
     })
     await zeroyt7.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./zeroyt7.json', JSON.stringify(zeroyt7.base64EncodedAuthInfo(), null, '\t'))
@@ -70,7 +70,7 @@ zeroyt7.on("group-participants-update", async (anu) => {
           "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60"
       }
       if (anu.action == "add" && mem.includes(zeroyt7.user.jid)) {
-        zeroyt7.sendMessage(anu.jid, "Halo!.. saya Zero YT7 saya akan membatu mempermudah kehidupan..seperti membuat sticker dan lain-lain. untuk memulai silahkan ketik !menu.", "conversation")
+        zeroyt7.sendMessage(anu.jid, "Halo!.. saya Gilbert bot saya akan membatu mempermudah kehidupan..seperti membuat sticker dan lain-lain. untuk memulai silahkan ketik !menu.", "conversation")
       }
       if (!isWelkom) return
       if (anu.action == "add" && !mem.includes(zeroyt7.user.jid)) {
@@ -91,7 +91,7 @@ zeroyt7.on("group-participants-update", async (anu) => {
         but = [
           { buttonId: 'add', buttonText: { displayText: 'Welcome Member Baru' }, type: 1 }
         ]
-        sendButImage(mdata.id, wel, "©Created : Zero YT7", buff, but)
+        sendButImage(mdata.id, wel, "©Created:Gilbert", buff, but)
       }
       if (!isWelkom) return
       if (anu.action == "remove" && !mem.includes(zeroyt7.user.jid)) {
@@ -112,7 +112,7 @@ zeroyt7.on("group-participants-update", async (anu) => {
         but = [
           { buttonId: 'remove', buttonText: { displayText: 'Selamat Tinggal' }, type: 1 }
         ]
-        sendButImage(mdata.id, out, "©Created : Zero YT7", buff, but)
+        sendButImage(mdata.id, out, "©Created : Gilbert", buff, but)
       }
       if (anu.action == "promote") {
         const mdata = await zeroyt7.groupMetadata(anu.jid)
